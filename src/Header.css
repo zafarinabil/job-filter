@@ -1,9 +1,9 @@
 .header {
-    background-image: url(/src/assets/bg-header-desktop.svg);
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(93, 164, 164);
-  }
+	background-image: url(./images/bg-header-desktop.svg);
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgb(93, 164, 164);
+}
