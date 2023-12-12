@@ -2,8 +2,7 @@ import react from 'react'
 import './App.css'
 import Header from './Header'
 import Card from './Card'
-
-
+import Filter from "./Filter";
 
 function App() {
 
@@ -12,6 +11,7 @@ function App() {
       <div className='container'>
         <Header></Header>
         <Card></Card>
+        <Filter />
       </div>
 
     </body>
@@ -19,4 +19,4 @@ function App() {
     )
 }
 
-export default App
+export default App;

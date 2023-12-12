@@ -1,0 +1,29 @@
+.filter-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  min-width: 1000px;
+  border-radius: 5px;
+  padding: 15px 0;
+}
+.chips {
+  display: flex;
+  margin-left: 25px;
+}
+.chip {
+  background-color: #edf7f6;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: hsl(180, 29%, 50%);
+}
+.clear {
+  color: hsl(180, 29%, 50%);
+  margin-right: 25px;
+}
+.clear:hover {
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
+}
