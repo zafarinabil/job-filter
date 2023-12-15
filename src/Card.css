@@ -1,24 +1,19 @@
 .container {
-	margin-top: 100px; /* Adjust this value based on your header height */
+	margin-top: 150px; /* Adjust this value based on your header height */
 }
 
 .card {
 	background-color: #fff;
 	color: black;
 	width: 70vw;
-	margin: 0 auto; /* Center the card */
+	margin-top: 20px; /* Center the card */
 	display: flex;
 	padding: 10px;
 	border-radius: 5px;
-	margin-top: 40px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
-<<<<<<< HEAD
 	position: relative; /* Set position to relative */
 	z-index: 1; /* Ensure card is above header */
-=======
-	border-left: 5px solid;
-	border-left-color: hsl(180, 29%, 50%);
->>>>>>> origin/main
+
 }
 
 .card img {
@@ -86,15 +81,3 @@
 	border-radius: 5px;
 }
 
-@media only screen and (max-width: 375px) {
-	.card {
-		width: 100vw; /* Occupy full width on mobile */
-		margin-top: 20px; /* Adjust as needed */
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
-	}
-
-	.container {
-		margin-top: 200px; /* Adjust this value based on your header height */
-	}
-	
-}

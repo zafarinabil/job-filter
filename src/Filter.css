@@ -1,4 +1,5 @@
 .filter-container {
+	margin-bottom: 30px;
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
@@ -8,10 +9,10 @@
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
 	position: fixed;
-	top: 60px;
+	top: 70px;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 30px;
+	height: 60px;
 	z-index: 2; /* Ensure it's above the header */
 }
 
@@ -36,17 +37,4 @@
 .clear:hover {
 	color: hsl(180, 29%, 50%);
 	text-decoration: underline;
-}
-
-@media only screen and (max-width: 375px) {
-	.filter-container {
-		width: 100%;
-		padding: 15px 10px;
-		top: 60px;
-		height: auto;
-	}
-	
-	.chips {
-		margin-left: 10px;
-	}
 }
