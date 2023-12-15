@@ -1,12 +1,11 @@
 .container {
-	margin-top: 150px; /* Adjust this value based on your header height */
+	margin-top: 200px; /* Adjust this value based on your header height */
 }
 
 .card {
 	background-color: #fff;
 	color: black;
 	width: 70vw;
-	margin-top: 20px; /* Center the card */
 	display: flex;
 	padding: 10px;
 	border-radius: 5px;
