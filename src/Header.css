@@ -6,4 +6,13 @@
 	top: 0;
 	left: 0;
 	background-color: rgb(93, 164, 164);
-}
+	z-index: 2; /* Set a higher z-index than the filter container */
+  }
+
+  @media only screen and (max-width: 375px) {
+	.header {
+		background-image: url(./images/bg-header-desktop.svg);
+		width: 100%;
+		height: 150px;
+	}
+  }
