@@ -1,5 +1,5 @@
 .container {
-	margin-top: 200px; /* Adjust this value based on your header height */
+	margin-top: 200px;
 }
 
 .card {
@@ -10,8 +10,8 @@
 	padding: 10px;
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
-	position: relative; /* Set position to relative */
-	z-index: 1; /* Ensure card is above header */
+	position: relative;
+	z-index: 1;
 }
 
 .featured {

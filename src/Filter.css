@@ -1,55 +1,41 @@
 .filter-container {
 	background-color: #fff;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 15px 10px;
-	width: 75vw;
+	padding: 15px;
+	width: 70vw;
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
+	z-index: 2;
 	position: fixed;
-	top: 50px;
-	left: 50%;
-	transform: translateX(-50%);
-	height: auto; /* Change height to auto to allow for dynamic content */
-	max-height: 120px; /* Add max-height to limit the height */
-	z-index: 2; /* Ensure it's above the header */
-  }
-  
-  .chips {
+	top: 129px;
+}
+
+.chips {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	margin-left: 25px;
-	flex-wrap: wrap; /* Allow chips to wrap to the next line */
-	max-width: calc(100% - 50px); /* Limit the width to prevent overflow */
-  }
-  
-  .chip {
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.chip {
 	background-color: #edf7f6;
 	border-radius: 5px;
-	padding: 5px 10px;
-	margin-right: 10px;
-	margin-bottom: 10px; /* Add margin to create space between chips */
+	padding: 0 10px;
 	color: hsl(180, 29%, 50%);
-	cursor: pointer; /* Add cursor pointer to indicate it's clickable */
-	transition: background-color 0.3s ease; /* Add transition for smooth color change */
-  }
-  
-  /* Add style for selected chips */
-  .chip.selected {
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.chip.selected {
 	background-color: #63baba;
 	color: #fff;
-  }
-  
-  .clear {
+}
+
+.clear {
 	color: hsl(180, 29%, 50%);
 	margin-right: 25px;
-	cursor: pointer; /* Add cursor pointer to indicate it's clickable */
-  }
-  
-  .clear:hover {
+	cursor: pointer;
+}
+
+.clear:hover {
 	text-decoration: underline;
-  }
-  
+}
