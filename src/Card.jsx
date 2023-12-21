@@ -26,25 +26,25 @@ const Card = ({ filters }) => {
 		<>
 			{filteredJobs.map((job) => (
 				<div key={job.id} className={`card ${job.featured ? 'featured' : ''}`}>
-					<img src={job.logo} alt={job.company} />
+					<div className="left-card-container">
+						<img src={job.logo} alt={job.company} />
 
-					<div className="card-mini">
-						<div className="top-heading">
-							<p className="company">{job.company}</p>
-							{job.new && <p className="p-heading">New!</p>}
-							{job.featured && <p className="p-heading">Featured</p>}
-						</div>
+						<div className="text-card-container">
+							<div className="text-card-header">
+								<p className="company">{job.company}</p>
+								{job.new && <p className="text-chip">New!</p>}
+								{job.featured && <p className="text-chip">Featured</p>}
+							</div>
 
-						<h2>{job.position}</h2>
+							<h2>{job.position}</h2>
 
-						<div className="down-heading">
-							<p className="p-under-heading">{job.postedAt}</p>
-							<p className="p-under-heading">{job.contract}</p>
-							<p className="p-under-heading">{job.location}</p>
+							<div className="text-card-footer">
+								<p className="footer-text">{`${job.postedAt} • ${job.contract} • ${job.location}`}</p>
+							</div>
 						</div>
 					</div>
 
-					<div className="right-heading">
+					<div className="right-card-container">
 						<p>{job.role}</p>
 						<p>{job.level}</p>
 						{job.languages.map((language) => (
