@@ -2,7 +2,22 @@ import React from 'react';
 import './Card.css';
 import data from './data/data.json'; // Import the data
 
-const Card = ({ filters }) => {
+const Card = ({ filters, onCardButtonClick }) => {
+	//test
+	const handleClick = () => {
+		// Use data from the imported JSON file
+		const exampleData = data[0]; // Use the first item as an example
+
+		const cardInfo = {
+			role1: exampleData.role,
+			level1: exampleData.level,
+			languages1: exampleData.languages,
+			tools1: exampleData.tools
+		};
+
+		onCardButtonClick(cardInfo);
+	};
+	//test-end
 	// Check if filters is an array and not empty before applying the filter
 	const filteredJobs =
 		filters && filters.length > 0
@@ -45,6 +60,8 @@ const Card = ({ filters }) => {
 					</div>
 
 					<div className="right-card-container">
+						<button onClick={handleClick}>Click me</button>
+						<div onClick={handleClick}>Click me</div>
 						<p>{job.role}</p>
 						<p>{job.level}</p>
 						{job.languages.map((language) => (

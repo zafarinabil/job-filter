@@ -7,43 +7,56 @@ import Filter from './Filter';
 import data from './data/data.json';
 
 function App() {
-  const [filters, setFilters] = useState([]);
-  const [roles, setRoles] = useState([]);
-  const [levels, setLevels] = useState([]);
-  const [languages, setLanguages] = useState([]);
-  const [tools, setTools] = useState([]);
+	const [filters, setFilters] = useState([]);
+	const [roles, setRoles] = useState([]);
+	const [levels, setLevels] = useState([]);
+	const [languages, setLanguages] = useState([]);
+	const [tools, setTools] = useState([]);
+	//test
+	const [cardInfo, setCardInfo] = useState(null);
 
-  const handleFilterChange = (selectedFilters) => {
-    setFilters(selectedFilters);
-  };
+	const handleCardButtonClick = ({ role1, level1, languages1, tools1 }) => {
+		setCardInfo({ role1, level1, languages1, tools1 });
+	};
 
-  useEffect(() => {
-    const uniqueRoles = Array.from(new Set(data.map((job) => job.role)));
-    const uniqueLevels = Array.from(new Set(data.map((job) => job.level)));
-    const uniqueLanguages = Array.from(new Set(data.map((job) => job.languages).flat()));
-    const uniqueTools = Array.from(new Set(data.map((job) => job.tools).flat()));
+	const handleClearButtonClick = () => {
+		setCardInfo(null);
+	};
+	//test-end
 
-    setRoles(uniqueRoles);
-    setLevels(uniqueLevels);
-    setLanguages(uniqueLanguages);
-    setTools(uniqueTools);
-  }, []);
+	const handleFilterChange = (selectedFilters) => {
+		setFilters(selectedFilters);
+	};
 
-  return (
-    <>
-      <div className="container">
-        <Header />
-        <Filter
-          roles={roles}
-          levels={levels}
-          languages={languages}
-          tools={tools}
-          onFilterChange={handleFilterChange}
-        />
-        <Card filters={filters} />
-      </div>
-    </>
-  );
+	useEffect(() => {
+		const uniqueRoles = Array.from(new Set(data.map((job) => job.role)));
+		const uniqueLevels = Array.from(new Set(data.map((job) => job.level)));
+		const uniqueLanguages = Array.from(new Set(data.map((job) => job.languages).flat()));
+		const uniqueTools = Array.from(new Set(data.map((job) => job.tools).flat()));
+
+		setRoles(uniqueRoles);
+		setLevels(uniqueLevels);
+		setLanguages(uniqueLanguages);
+		setTools(uniqueTools);
+	}, []);
+
+	return (
+		<>
+			<div className="container">
+				<Header />
+				<Filter
+					cardInfo={cardInfo}
+					onClearButtonClick={handleClearButtonClick}
+					roles={roles}
+					levels={levels}
+					languages={languages}
+					tools={tools}
+					onFilterChange={handleFilterChange}
+				/>
+				<Card onCardButtonClick={handleCardButtonClick} filters={filters} />
+			</div>
+		</>
+	);
 }
 
 export default App;

@@ -1,4 +1,7 @@
 .filter-container {
+	display: flex;
+	justify-content: space-between;
+
 	background-color: #fff;
 	padding: 15px;
 	width: 70vw;
@@ -12,6 +15,7 @@
 .chips {
 	display: flex;
 	justify-content: center;
+	align-items: baseline;
 	flex-wrap: wrap;
 	gap: 5px;
 }
@@ -37,5 +41,6 @@
 }
 
 .clear:hover {
+	color: hsl(180, 29%, 50%);
 	text-decoration: underline;
 }
