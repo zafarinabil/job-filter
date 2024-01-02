@@ -60,8 +60,8 @@ const Card = ({ filters, onCardButtonClick }) => {
 					</div>
 
 					<div className="right-card-container">
-						<button onClick={handleClick}>Click me</button>
-						<div onClick={handleClick}>Click me</div>
+						{/* <button onClick={handleClick}>Click me</button> */}
+						{/* <div onClick={handleClick}>Click me</div> */}
 						<p>{job.role}</p>
 						<p>{job.level}</p>
 						{job.languages.map((language) => (
