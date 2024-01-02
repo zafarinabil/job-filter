@@ -1,30 +1,12 @@
+// Card.jsx
 import React from 'react';
 import './Card.css';
-import data from './data/data.json'; // Import the data
+import Filter from './Filter';
 
-const Card = ({ filters }) => {
-	// Check if filters is an array and not empty before applying the filter
-	const filteredJobs =
-		filters && filters.length > 0
-			? data.filter((job) => {
-					// Check if the job matches all selected filters
-					return filters.every((filter) => {
-						if (filter.startsWith('role-')) {
-							return job.role === filter.replace('role-', '');
-						} else if (filter.startsWith('level-')) {
-							return job.level === filter.replace('level-', '');
-						} else if (filter.startsWith('language-')) {
-							return job.languages.includes(filter.replace('language-', ''));
-						} else if (filter.startsWith('tool-')) {
-							return job.tools.includes(filter.replace('tool-', ''));
-						}
-						return false;
-					});
-			  })
-			: data;
+const Card = ({ jobs, roles, levels, languages, tools, onFilterChange, onClearFilters }) => {
 	return (
 		<>
-			{filteredJobs.map((job) => (
+			{jobs.map((job) => (
 				<div key={job.id} className={`card ${job.featured ? 'featured' : ''}`}>
 					<div className="left-card-container">
 						<img src={job.logo} alt={job.company} />
@@ -45,14 +27,14 @@ const Card = ({ filters }) => {
 					</div>
 
 					<div className="right-card-container">
-						<p>{job.role}</p>
-						<p>{job.level}</p>
-						{job.languages.map((language) => (
-							<p key={language}>{language}</p>
-						))}
-						{job.tools.map((tool) => (
-							<p key={tool}>{tool}</p>
-						))}
+						<Filter
+							roles={[job.role]}
+							levels={[job.level]}
+							languages={job.languages}
+							tools={job.tools}
+							onFilterChange={onFilterChange}
+							onClearFilters={onClearFilters}
+						/>
 					</div>
 				</div>
 			))}

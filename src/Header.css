@@ -1,10 +1,42 @@
-.header {
-	background-image: url(./images/bg-header-desktop.svg);
-	width: 100%;
-	height: 156px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgb(93, 164, 164);
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	/* width: 30%; */
+	background-color: #fff;
+	padding: 15px;
+	width: 70vw;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
 	z-index: 2;
+	/* position: fixed; */
+	/* top: 129px; */
+	color: #000;
+}
+
+.filter-result {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.selected-filter {
+	background-color: #edf7f6;
+	/* background-color: #000; */
+	border-radius: 5px;
+	padding: 0 10px;
+	color: hsl(180, 29%, 50%);
+	/* cursor: pointer; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 247, 0.142);
+}
+
+.clear {
+	color: hsl(180, 29%, 50%);
+	margin-right: 25px;
+	/* cursor: pointer; */
+}
+
+.clear:hover {
+	text-decoration: underline;
+	color: hsl(180, 29%, 50%);
 }
