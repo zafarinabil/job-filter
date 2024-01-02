@@ -7,7 +7,7 @@ const Card = ({ jobs, roles, levels, languages, tools, onFilterChange, onClearFi
 	return (
 		<>
 			{jobs.map((job) => (
-				<div key={job.id} className={`card ${job.featured ? 'featured' : ''}`}>
+				<div key={job.id} className={`card${job.featured ? ' featured' : ''}`}>
 					<div className="left-card-container">
 						<img src={job.logo} alt={job.company} />
 

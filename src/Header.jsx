@@ -8,7 +8,7 @@ const Header = ({ selectedFilters, onClearFilters }) => {
 	};
 
 	const handleClearFilters = (event) => {
-		// event.preventDefault();
+		event.preventDefault();
 		onClearFilters();
 	};
 
