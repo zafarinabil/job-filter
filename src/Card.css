@@ -20,7 +20,7 @@
 	padding: 15px;
 }
 
-.featured {
+.card.featured {
 	border-left: 5px solid;
 	border-left-color: hsl(180, 29%, 50%);
 }
@@ -35,45 +35,51 @@
 }
 
 .text-card-container h2 {
-	margin: 5px 0px;
-	font-weight: 600;
-	font-size: 20px;
+	margin: 10px 0px;
+	font-weight: 700;
+	/* font-size: 20px; */
+	cursor: pointer;
+}
+.text-card-container h2:hover {
+	color: hsl(180, 29%, 50%);
 }
 
 .text-card-header {
 	display: flex;
-	gap: 20px;
+	align-items: center;
+	gap: 15px;
 	color: rgb(93, 164, 164);
+}
+.company {
 	font-weight: 700;
-	font-size: 14px;
 }
 
-.text-chip {
-	background-color: rgb(93, 164, 164);
-	padding: 0 5px 0 5px;
+.roundedchips-container {
+	display: flex;
+	gap: 6px;
+}
+
+.roundedchip {
+	background-color: hsl(180, 29%, 50%);
+	padding: 2px 8px;
+	/* padding: 6px 8px; */
 	border-radius: 15px;
 	color: #fff;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+}
+
+.roundedchip.featured {
+	background-color: hsl(180, 14%, 20%);
 }
 
 .footer-text {
-	color: #5959597d;
+	color: hsl(180, 8%, 52%);
 	font-weight: 500;
-	font-size: 14px;
 }
 
 .right-card-container {
 	display: flex;
 	align-items: center;
-	gap: 10px;
-	color: #5959597d;
-	font-weight: 500;
-	font-size: 14px;
-}
-
-.right-card-container p {
-	background-color: #eff6f6;
-	padding: 5px;
-	border-radius: 5px;
-	color: rgb(93, 164, 164);
 	font-weight: 700;
 }

@@ -14,14 +14,18 @@ const Card = ({ jobs, roles, levels, languages, tools, onFilterChange, onClearFi
 						<div className="text-card-container">
 							<div className="text-card-header">
 								<p className="company">{job.company}</p>
-								{job.new && <p className="text-chip">New!</p>}
-								{job.featured && <p className="text-chip">Featured</p>}
+								<div className="roundedchips-container">
+									{job.new && <p className="roundedchip">NEW!</p>}
+									{job.featured && (
+										<p className={`roundedchip${job.featured ? ' featured' : ''}`}>FEATURED</p>
+									)}
+								</div>
 							</div>
 
 							<h2>{job.position}</h2>
 
 							<div className="text-card-footer">
-								<p className="footer-text">{`${job.postedAt} • ${job.contract} • ${job.location}`}</p>
+								<p className="footer-text">{`${job.postedAt} \u00A0 • \u00A0 ${job.contract} \u00A0 • \u00A0 ${job.location}`}</p>
 							</div>
 						</div>
 					</div>
