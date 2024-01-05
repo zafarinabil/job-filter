@@ -2,7 +2,7 @@
 import React from 'react';
 import './Header.css';
 
-const Header = ({ selectedFilters, onClearFilters }) => {
+const Header = ({ selectedFilters, onClearFilters, onClearSingleFilter }) => {
 	const getFilterValue = (filter) => {
 		return filter.replace(/^[^-]+-/, '');
 	};
@@ -10,6 +10,10 @@ const Header = ({ selectedFilters, onClearFilters }) => {
 	const handleClearFilters = (event) => {
 		event.preventDefault();
 		onClearFilters();
+	};
+
+	const handleClearSingleFilter = (filter) => {
+		onClearSingleFilter(filter);
 	};
 
 	return (
@@ -20,8 +24,11 @@ const Header = ({ selectedFilters, onClearFilters }) => {
 			>
 				<div className="filter-result">
 					{selectedFilters.map((filter) => (
-						<div key={filter} className="selected-filter">
-							{getFilterValue(filter)}
+						<div className="clear-container" key={filter}>
+							<div className="selected-filter">{getFilterValue(filter)}</div>
+							<div className="clearfilter" onClick={() => handleClearSingleFilter(filter)}>
+								X
+							</div>
 						</div>
 					))}
 				</div>

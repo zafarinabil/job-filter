@@ -21,6 +21,11 @@ function App() {
 		setFilters([]);
 	};
 
+	const handleClearSingleFilter = (filterToRemove) => {
+		const updatedFilters = filters.filter((filter) => filter !== filterToRemove);
+		setFilters(updatedFilters);
+	};
+
 	useEffect(() => {
 		const uniqueRoles = Array.from(new Set(data.map((job) => job.role)));
 		const uniqueLevels = Array.from(new Set(data.map((job) => job.level)));
@@ -54,7 +59,11 @@ function App() {
 		<>
 			<div className="container">
 				<div className="topheader"></div>
-				<Header selectedFilters={filters} onClearFilters={handleClearFilters} />
+				<Header
+					selectedFilters={filters}
+					onClearFilters={handleClearFilters}
+					onClearSingleFilter={handleClearSingleFilter}
+				/>
 				<Card
 					jobs={filteredJobs}
 					roles={roles}
