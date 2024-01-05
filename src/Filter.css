@@ -17,3 +17,9 @@
 	background-color: hsl(180, 29%, 50%);
 	color: #fff;
 }
+
+@media screen and (max-width: 375px) {
+	.chips {
+		justify-content: flex-start;
+	}
+}

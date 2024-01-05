@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* width: 30%; */
 	background-color: #fff;
 	padding: 15px;
 	width: 70vw;
@@ -56,4 +55,20 @@
 .clearfilter:hover {
 	background-color: hsl(180, 14%, 20%);
 	color: #fff;
+}
+
+@media screen and (max-width: 375px) {
+	.header-container {
+		width: 325px;
+		left: 25px;
+	}
+
+	.filter-result {
+		justify-content: flex-start;
+	}
+
+	/* .header-container {
+		width: 375px;
+		left: 75px;
+	} */
 }

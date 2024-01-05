@@ -1,5 +1,5 @@
 .container {
-	width: 1440px;
+	/* width: 1440px; */
 	height: auto;
 	display: flex;
 	align-items: center;
@@ -18,4 +18,14 @@
 	left: 0;
 	background-color: hsl(180, 29%, 50%);
 	z-index: 2;
+}
+
+@media screen and (max-width: 375px) {
+	.container {
+		margin-top: 270px;
+	}
+
+	.topheader {
+		max-width: 375px;
+	}
 }
