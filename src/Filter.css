@@ -6,15 +6,14 @@
 }
 
 .chip {
-	/* background-color: #edf7f6; */
-	border-radius: 5px;
-	padding: 0 10px;
+	background-color: hsl(180, 31%, 95%);
 	color: hsl(180, 29%, 50%);
-	/* cursor: pointer; */
-	/* transition: background-color 0.3s ease; */
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
 }
 
-.chip.selected {
-	background-color: #63baba;
+.chip:hover {
+	background-color: hsl(180, 29%, 50%);
 	color: #fff;
 }
