@@ -14,7 +14,10 @@ const Header = ({ selectedFilters, onClearFilters }) => {
 
 	return (
 		<>
-			<div className="header-container">
+			<div
+				className="header-container"
+				style={{ display: selectedFilters.some((filter) => getFilterValue(filter)) ? 'flex' : 'none' }}
+			>
 				<div className="filter-result">
 					{selectedFilters.map((filter) => (
 						<div key={filter} className="selected-filter">

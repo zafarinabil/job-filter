@@ -33,41 +33,25 @@ const Filter = ({ roles, levels, languages, tools, onFilterChange, onClearFilter
 			<div className="filter-container">
 				<div className="chips">
 					{roles.map((role) => (
-						<div
-							key={role}
-							className={`chip${selectedFilters.includes(`role-${role}`) ? ' selected' : ''}`}
-							onClick={() => handleFilterClick('role', role)}
-						>
+						<div key={role} className="chip" onClick={() => handleFilterClick('role', role)}>
 							{role}
 						</div>
 					))}
 
 					{levels.map((level) => (
-						<div
-							key={level}
-							className={`chip${selectedFilters.includes(`level-${level}`) ? ' selected' : ''}`}
-							onClick={() => handleFilterClick('level', level)}
-						>
+						<div key={level} className="chip" onClick={() => handleFilterClick('level', level)}>
 							{level}
 						</div>
 					))}
 
 					{languages.map((language) => (
-						<div
-							key={language}
-							className={`chip${selectedFilters.includes(`language-${language}`) ? ' selected' : ''}`}
-							onClick={() => handleFilterClick('language', language)}
-						>
+						<div key={language} className="chip" onClick={() => handleFilterClick('language', language)}>
 							{language}
 						</div>
 					))}
 
 					{tools.map((tool) => (
-						<div
-							key={tool}
-							className={`chip${selectedFilters.includes(`tool-${tool}`) ? ' selected' : ''}`}
-							onClick={() => handleFilterClick('tool', tool)}
-						>
+						<div key={tool} className="chip" onClick={() => handleFilterClick('tool', tool)}>
 							{tool}
 						</div>
 					))}
