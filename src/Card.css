@@ -79,7 +79,7 @@
 	font-weight: 700;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 	.card {
 		flex-direction: column;
 		width: 325px;

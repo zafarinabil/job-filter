@@ -57,10 +57,9 @@
 	color: #fff;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 	.header-container {
 		width: 325px;
-		left: 25px;
 	}
 
 	.filter-result {

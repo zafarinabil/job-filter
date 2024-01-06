@@ -20,12 +20,8 @@
 	z-index: 2;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 	.container {
 		margin-top: 270px;
-	}
-
-	.topheader {
-		max-width: 375px;
 	}
 }
