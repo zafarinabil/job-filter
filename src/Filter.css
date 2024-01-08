@@ -22,4 +22,7 @@
 	.chips {
 		justify-content: flex-start;
 	}
+	.chip {
+		margin: 5px;
+	}
 }
