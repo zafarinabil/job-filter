@@ -29,7 +29,7 @@ const Card = ({ jobs, roles, levels, languages, tools, onFilterChange, onClearFi
 							</div>
 						</div>
 					</div>
-
+					<div className="divider"></div>
 					<div className="right-card-container">
 						<Filter
 							roles={[job.role]}
