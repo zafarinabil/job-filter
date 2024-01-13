@@ -12,6 +12,7 @@ function App() {
 	const [languages, setLanguages] = useState([]);
 	const [tools, setTools] = useState([]);
 	const [filteredJobs, setFilteredJobs] = useState(data);
+	const [headerHeight, setHeaderHeight] = useState(0);
 
 	const handleFilterChange = (selectedFilters) => {
 		setFilters(selectedFilters);
@@ -57,12 +58,16 @@ function App() {
 
 	return (
 		<>
-			<div className="container">
+			<div
+				className="container"
+				style={headerHeight > 60 ? { marginTop: `calc(190px + ${headerHeight}px)` } : { marginTop: '210px' }}
+			>
 				<div className="topheader"></div>
 				<Header
 					selectedFilters={filters}
 					onClearFilters={handleClearFilters}
 					onClearSingleFilter={handleClearSingleFilter}
+					onHeaderHeightChange={(height) => setHeaderHeight(height)}
 				/>
 				<Card
 					jobs={filteredJobs}

@@ -10,7 +10,7 @@
 	z-index: 2;
 	color: #000;
 	position: fixed;
-	top: 130px;
+	top: 120px;
 }
 
 .filter-result {
@@ -65,9 +65,4 @@
 	.filter-result {
 		justify-content: flex-start;
 	}
-
-	/* .header-container {
-		width: 375px;
-		left: 75px;
-	} */
 }

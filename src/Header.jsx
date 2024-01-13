@@ -1,8 +1,10 @@
 // Header.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 
-const Header = ({ selectedFilters, onClearFilters, onClearSingleFilter }) => {
+const Header = ({ selectedFilters, onClearFilters, onClearSingleFilter, onHeaderHeightChange }) => {
+	const [headerHeight, setHeaderHeight] = useState(0);
+
 	const getFilterValue = (filter) => {
 		return filter.replace(/^[^-]+-/, '');
 	};
@@ -16,10 +18,19 @@ const Header = ({ selectedFilters, onClearFilters, onClearSingleFilter }) => {
 		onClearSingleFilter(filter);
 	};
 
+	useEffect(() => {
+		const header = document.getElementById('header-container');
+
+		setHeaderHeight(header.offsetHeight);
+
+		onHeaderHeightChange(header.offsetHeight);
+	}, [selectedFilters, onHeaderHeightChange]);
+
 	return (
 		<>
 			<div
 				className="header-container"
+				id="header-container"
 				style={{ display: selectedFilters.some((filter) => getFilterValue(filter)) ? 'flex' : 'none' }}
 			>
 				<div className="filter-result">
