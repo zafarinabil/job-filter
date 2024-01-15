@@ -9,7 +9,7 @@
 }
 
 .topheader {
-	background-image: url(./images/bg-header-desktop.svg);
+	background-image: url('./images/bg-header-desktop.svg');
 	width: 100%;
 	height: 150px;
 	position: fixed;
