@@ -20,6 +20,9 @@
 }
 
 @media screen and (max-width: 768px) {
+	.topheader {
+		background-image: url('/images/bg-header-mobile.svg');
+	}
 	.container {
 		gap: 50px;
 	}
